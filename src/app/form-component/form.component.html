@@ -1,0 +1,42 @@
+ <div class="dialog-container" id="dialog-form">
+    <div class="dialog-content">
+      <h3>Form Dialog</h3>
+
+      <form #formPegawai="ngForm">
+        <table>
+
+          <tr>
+            <td>NIP</td>
+            <td><input type="number" placeholder="NIP pegawai" [(ngModel)]="nip" name="nip" required/></td>
+          </tr>
+
+          <tr>
+            <td>Nama Pegawai</td>
+            <td><input type="text" placeholder="Nama Pegawai" [(ngModel)]="nama" name="nama" required/></td>
+          </tr>
+
+          <tr>
+            <td>
+              Status
+            </td>
+
+            <td>
+              <select [(ngModel)]="status" name="status" required>
+                <option [value]="'Menikah'">Menikah</option>
+                <option [value]="'Belum Menikah'">Belum Menikah</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2">
+              <button style="width: 100%;" (click)="doSave()" [disabled]="!formPegawai.form.valid">Save</button>
+            </td>
+          </tr>
+
+        </table>
+      </form>
+
+    </div>
+  </div>
+

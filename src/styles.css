@@ -1,1 +1,210 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+  height: 100%;
+  min-height: 100%;
+}
+body  {
+  min-width: 1200px;
+  height: 100%;
+  min-height: 100%;
+  margin : 0;
+  background-color : #DADADA;
+  padding : 0;
+}
+
+*{
+  box-sizing : border-box;
+}
+
+
+
+/*init wrapper-container*/
+#wrapper-container{
+  height: 100%;
+}
+/*init wrapper-container*/
+
+/*init container*/
+#container {
+  width: 980px;
+  margin : auto;
+  height: 100%;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+/*init container*/
+
+
+/*init clearfix*/
+.clearfix:after{
+  content : "";
+  display: block;
+  clear: both;
+}
+/*init clearfix*/
+
+
+
+
+/*init right-container*/
+#right-container{
+  overflow: auto;
+  height: 100%;
+  background-color : white;
+}
+#right-nav{
+  background-color : #3C8DBC;
+  color : white;
+  padding : 11px;
+  font-weight: bold;
+}
+#right-nav-item{
+  float : right;
+  margin-top : 2px;
+  margin-left : 10px;
+  margin-right: 10px;
+}
+/*init right-container*/
+
+
+/*init nav*/
+#left-container{
+  float : left;
+  width : 25%;
+  height: 100%;
+  background-color : #222D32;
+}
+#title-nav{
+  color : white;
+  background-color: #357CA5;
+  padding : 10px;
+  margin : 0;
+  font-weight:bold;
+}
+#dashboard-menu{
+
+}
+#dashboard-menu span{
+  color  : white;
+  cursor : pointer ;
+  margin-top : 5px;
+  margin-bottom : 5px;
+  font-weight: bolder;
+  display: block;
+}
+#dashboard-menu a{
+  display: block;
+  text-decoration: none;
+  cursor : pointer;
+  transition : background-color  300ms;
+  background-color : white;
+  color  : crimson;
+}
+#dashboard-menu a:hover{
+  background-color : #00A65A;
+}
+/*init nav*/
+
+/*init main container*/
+#main-container{
+  background-color : #FFFFFF;
+}
+#header-panel{
+  margin-top : 5px;
+}
+.header:hover{
+  background-color : #00A65A;
+  color : white;
+}
+
+
+.header p {
+  color : #DD4B39;
+  margin : 0;
+  margin-left : 2px;
+  padding : 0;
+}
+.header button{
+  margin-left : 2px;
+  cursor: pointer;
+  margin-bottom : 2px;
+}
+.header span{
+  display: block;
+  color : white;
+  font-weight: bolder;
+  background-color : #00A65A;
+}
+.header{
+  width : 30%;
+  margin-left : 80px;
+  cursor : pointer;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+  display: inline-block;
+  transition : background-color 500ms , color 500ms;
+}
+#main-content {
+  padding : 10px;
+}
+#card-container{
+}
+.card{
+  border-top:4px solid rgba(0,0,0,0.3);
+  border-top-right-radius: 2px;
+  margin-bottom : 5px;
+  border-top-left-radius: 2px;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+  padding:3px;
+}
+/*init main container*/
+
+
+/*init dialog*/
+.dialog-container{
+  position: fixed;
+  left : 0;
+  top : 0;
+  height: 100%;
+  right : 0;
+  background-color : rgba(0,0,0,0.3);
+}
+.dialog-content{
+  width : 50%;
+  margin : auto;
+  background-color : white;
+  margin-top : 100px;
+}
+.dialog-content h3{
+  background-color : #3C8DBC;
+  margin : 0;
+  padding : 1%;
+  color : white;
+}
+/*init dialog*/
+
+
+/*list-container*/
+
+#tabel-data {
+  margin-left : 5%;
+  margin-bottom : 10px;
+  width: 90%;
+}
+#list-content{
+
+}
+#input-container {
+  margin : 5px;
+  float : right;
+}
+#list-container{
+  border : 1px solid dodgerblue;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+#list-container h3{
+  margin : 0;
+  background-color : #3C8DBC;
+  color : white;
+  padding : 1%;
+}
+/*list-container*/

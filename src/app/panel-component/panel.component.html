@@ -1,0 +1,76 @@
+<div id="header-panel">
+
+  <div class="header">
+    <span>Delete</span>
+    <p id="deleteModelP">Do Delete action</p>
+    <button (click)="openDialogDelete()" [disabled]="disabledDelete" id="header-delete">Delete</button>
+  </div>
+
+  <div class="header">
+    <span>Update</span>
+    <p id="updateModelP">Do Update action</p>
+    <button (click)="openDialogUpdate()" [disabled]="disabledUpdate" id="header-update">Update</button>
+  </div>
+
+</div>
+
+<div id="dialog-delete" class="dialog-container" >
+  <div class="dialog-content">
+    <h3>Delete dialog</h3>
+
+    <form #deleteForm="ngForm">
+      <table>
+
+        <tr>
+          <td>NIP</td>
+          <td><input type="number" #nip placeholder="NIP Pegawai" [value]="deleteNIP" name="deleteNIP" readonly/></td>
+        </tr>
+
+        <tr>
+          <td>
+            <button (click)="doDelete(nip.value)">Delete</button>
+          </td>
+        </tr>
+
+      </table>
+    </form>
+
+  </div>
+</div>
+
+<div id="dialog-update" class="dialog-container">
+  <div class="dialog-content">
+    <h3>Update Dialog</h3>
+    <form #updateForm="ngForm">
+      <table>
+        <tr>
+          <td>NIP</td>
+          <td><input type="number" name="updateNIP" [value]="updateNIP" readonly/></td>
+        </tr>
+        <tr>
+          <td>Nama Pegawai</td>
+          <td><input type="text" name="updateNama" [value]="updateNama" #inputNama required/></td>
+        </tr>
+
+        <tr>
+          <td>Status</td>
+          <td>
+            <select name="updateStatus" [value]="updateStatus" #inputStatus>
+              <option [value]="'Menikah'">Menikah</option>
+              <option [value]="'Belum Menikah'">Belum Menikah</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <button (click)="doUpdate(inputNama.value , inputStatus.value)" [disabled]="!updateForm.form.valid">Update</button>
+          </td>
+        </tr>
+
+      </table>
+    </form>
+  </div>
+</div>
+
+

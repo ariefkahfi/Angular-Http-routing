@@ -1,0 +1,22 @@
+<div id="list-container">
+  <h3>Data Pegawai</h3>
+  <div id="list-content" class="clearfix">
+    <div id="input-container">Nama Pegawai<input #cariNama (input)="onChange(cariNama.value)" /><br/></div>
+  </div>
+  <table id="tabel-data" border="2">
+    <tr>
+      <td class="kolom-data">NIP</td>
+      <td class="kolom-data">Nama Pegawai</td>
+      <td class="kolom-data">Status Menikah</td>
+      <td>Action Delete</td>
+      <td>Action Update</td>
+    </tr>
+    <tr *ngFor="let p of data">
+      <td>{{p.nip}}</td>
+      <td>{{p.nama_pegawai}}</td>
+      <td>{{p.status}}</td>
+      <td style="text-align: center;"><button style="background-color : #00A65A; color : white; border : 1px solid dodgerblue; padding : 5px; border-radius : 5px; cursor : pointer;" (click)="selectDelete(p)">Delete</button></td>
+      <td style="text-align : center;"><button style="background-color : dodgerblue; color : white; border : 1px solid white ; padding : 5px; border-radius : 5px; cursor : pointer;" (click)="selectUpdate(p)">Update</button></td>
+    </tr>
+  </table>
+</div>
